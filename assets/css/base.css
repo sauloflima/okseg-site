@@ -1,0 +1,170 @@
+/* ==========================================================================
+   OKSEG · Base — reset, tipografia e utilitários
+   ========================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+/* [hidden] precisa vencer displays de componentes (ex.: .btn { display:inline-flex }) */
+[hidden] { display: none !important; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + var(--space-2));
+  -webkit-text-size-adjust: 100%;
+  /* impede que o menu off-canvas (fixed, translateX 100%) gere rolagem lateral */
+  overflow-x: hidden;
+  /* nossos próprios estados :active substituem o flash cinza de toque no mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-corpo);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  color: var(--grafite);
+  background: var(--branco);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* seleção de texto na cor da marca */
+::selection {
+  background: var(--okseg-laranja);
+  color: var(--branco);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select { font: inherit; color: inherit; }
+
+button { cursor: pointer; border: 0; background: none; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { list-style: none; padding: 0; }
+
+/* --- Títulos ------------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulo);
+  line-height: 1.15;
+  color: var(--preto);
+  text-wrap: balance;
+  /* tracking levemente negativo dá um ar mais premium ao Montserrat pesado */
+  letter-spacing: -.01em;
+}
+
+h1 { font-size: var(--fs-h1); font-weight: 800; text-transform: uppercase; }
+h2 { font-size: var(--fs-h2); font-weight: 700; }
+h3 { font-size: var(--fs-h3); font-weight: 700; }
+
+p { text-wrap: pretty; }
+
+/* Assinatura tipográfica: peso leve + peso pesado na mesma frase.
+   specs/design.md § 4 */
+.leve   { font-weight: 300; color: var(--grafite); }
+.forte  { font-weight: 800; }
+.destaque  { color: var(--okseg-laranja); }
+
+/* --- Layout -------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.secao { padding-block: var(--space-5); }
+
+.secao--clara  { background: var(--cinza-claro); }
+.secao--escura { background: var(--grafite-dark); color: var(--branco); }
+.secao--escura h2,
+.secao--escura h3 { color: var(--branco); }
+.secao--escura .leve { color: rgba(255, 255, 255, .75); }
+
+/* Título centralizado de seção — usa a assinatura tipográfica (.leve/.forte) */
+.secao__titulo {
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-h2);
+  text-align: center;
+}
+
+/* Se vier um parágrafo logo abaixo, o título encosta nele */
+.secao__titulo:has(+ .secao__intro) { margin-bottom: var(--space-3); }
+
+.secao__intro {
+  max-width: 56ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--cinza-texto);
+}
+
+.secao--escura .secao__intro { color: rgba(255, 255, 255, .72); }
+
+@media (min-width: 768px) {
+  .secao { padding-block: var(--space-7); }
+}
+
+/* --- Acessibilidade ------------------------------------------------------ */
+
+:focus-visible {
+  outline: 3px solid var(--okseg-laranja);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.secao--escura :focus-visible,
+.hero :focus-visible { outline-color: var(--branco); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pular-para-conteudo {
+  position: absolute;
+  top: -100px; left: var(--gutter);
+  z-index: 200;
+  padding: var(--space-2) var(--space-3);
+  background: var(--okseg-laranja-forte);
+  color: var(--branco);
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  transition: top var(--transicao);
+}
+
+.pular-para-conteudo:focus { top: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

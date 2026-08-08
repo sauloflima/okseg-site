@@ -1,0 +1,740 @@
+/* ==========================================================================
+   OKSEG · Componentes
+   Fonte da verdade: specs/design.md § 6
+   ========================================================================== */
+
+/* --- Botões -------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding: 14px var(--space-4);
+  font-family: var(--font-corpo);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: background var(--transicao), color var(--transicao),
+              border-color var(--transicao), transform var(--transicao),
+              box-shadow var(--transicao);
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); transition-duration: .05s; }
+
+/* Fundos com texto branco usam o laranja-forte: o laranja da marca sobre branco
+   dá 3,56:1 e reprovaria no AA para texto normal. */
+.btn--primario {
+  position: relative;
+  overflow: hidden;
+  background: var(--okseg-laranja-forte);
+  color: var(--branco);
+  box-shadow: 0 6px 18px -6px rgba(194, 74, 8, .55);
+}
+.btn--primario:hover {
+  background: var(--okseg-laranja-hover);
+  box-shadow: 0 10px 24px -6px rgba(194, 74, 8, .6);
+}
+
+/* brilho que varre o botão primário no hover */
+.btn--primario::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .38), transparent);
+  transform: skewX(-18deg);
+  transition: left .55s ease;
+  pointer-events: none;
+}
+.btn--primario:hover::after { left: 130%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn--primario::after { display: none; }
+}
+
+.btn--escuro {
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: 0;
+}
+.btn--escuro:hover { background: var(--okseg-laranja-forte); }
+
+.btn--contorno-claro {
+  background: transparent;
+  color: var(--branco);
+  border-color: var(--branco);
+}
+.btn--contorno-claro:hover {
+  background: var(--branco);
+  color: var(--preto);
+}
+
+.btn--contorno-marca {
+  background: transparent;
+  color: var(--okseg-laranja-forte);
+  border-color: var(--okseg-laranja-forte);
+}
+.btn--contorno-marca:hover {
+  background: var(--okseg-laranja-forte);
+  color: var(--branco);
+}
+
+.btn--texto {
+  padding-inline: 0;
+  min-height: 0;
+  color: var(--okseg-laranja-forte);
+  letter-spacing: .04em;
+}
+.btn--texto:hover { text-decoration: underline; transform: none; }
+
+.btn--texto-claro { color: var(--branco); }
+
+.btn--largo { width: 100%; }
+
+/* --- Botão de loja de app (fundo escuro sobre fundo claro) --------------- */
+
+.btn-store {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-1) var(--space-3);
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.btn-store:hover { background: var(--grafite-dark); transform: translateY(-2px); }
+.btn-store svg { flex-shrink: 0; }
+
+.btn-store span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.btn-store small {
+  font-size: .625rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .6);
+}
+
+/* --- Pílula "Área do Cliente" -------------------------------------------- */
+
+.btn-pilula {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding: 10px var(--space-3);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--grafite);
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius-pill);
+  transition: border-color var(--transicao), color var(--transicao),
+              background var(--transicao);
+}
+.btn-pilula:hover {
+  border-color: var(--okseg-laranja-forte);
+  color: var(--okseg-laranja-forte);
+}
+.btn-pilula svg { flex-shrink: 0; }
+
+/* --- Badge de seção ------------------------------------------------------ */
+
+.badge-secao {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: var(--space-3);
+  padding: var(--space-1) var(--space-4) var(--space-1) var(--space-1);
+  background: var(--cinza-claro);
+  border-radius: var(--radius-sm);
+}
+
+.secao--clara .badge-secao,
+.secao--escura .badge-secao { background: rgba(128, 128, 128, .16); }
+
+.badge-secao__marca {
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.badge-secao__texto {
+  font-family: var(--font-titulo);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--grafite);
+}
+
+.secao--escura .badge-secao__texto { color: var(--branco); }
+
+/* --- Marca OKSEG --------------------------------------------------------- */
+/* Logotipo oficial. `.marca--clara` usa a variante para fundo escuro.
+   Origem dos arquivos: "imagens - site/LOGO GRUPO OKSEG.png". */
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 44px;        /* alvo de toque (a arte tem 42px) */
+}
+
+.marca img {
+  width: auto;
+  height: 42px;
+}
+
+@media (min-width: 1024px) {
+  .marca img { height: 48px; }
+}
+
+/* --- Card de solução ----------------------------------------------------- */
+
+.card-solucao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  background: linear-gradient(160deg, var(--cinza-card) 0%, var(--branco) 78%);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transicao-suave), box-shadow var(--transicao-suave);
+  /* Corte diagonal no canto inferior direito — assinatura visual */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--corte-card)),
+    calc(100% - var(--corte-card)) 100%,
+    0 100%
+  );
+}
+
+.card-solucao:hover {
+  transform: translateY(-6px);
+  /* sombra com um leve calor de marca — a elevação lê como intencional */
+  box-shadow: 0 20px 42px -14px rgba(194, 74, 8, .28),
+              0 10px 24px rgba(0, 0, 0, .08);
+}
+
+/* Ícone em quadro — mesma linguagem dos tiles da home e dos diferenciais */
+.card-solucao__icone {
+  width: 56px;
+  height: 56px;
+  padding: 13px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--okseg-laranja);
+  background: var(--okseg-laranja-suave);
+  box-shadow: inset 0 0 0 1px rgba(231, 91, 14, .18);
+  transition: transform var(--transicao-suave), color var(--transicao-suave),
+              background var(--transicao-suave), box-shadow var(--transicao-suave);
+}
+
+/* o card inteiro é a área de toque: no hover o quadro acende e o CTA responde */
+.card-solucao:hover .card-solucao__icone {
+  transform: translateY(-2px);
+  background: var(--okseg-laranja);
+  color: var(--branco);
+  box-shadow: inset 0 0 0 1px var(--okseg-laranja);
+}
+
+.card-solucao:hover .btn--escuro { background: var(--okseg-laranja-forte); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-solucao:hover,
+  .card-solucao:hover .card-solucao__icone { transform: none; }
+}
+
+.card-solucao__titulo {
+  font-size: 1.375rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.card-solucao__titulo .leve,
+.card-solucao__titulo .forte { display: block; }
+
+.card-solucao__texto {
+  font-size: var(--fs-small);
+  color: var(--cinza-texto);
+  margin-bottom: var(--space-3);
+}
+
+.card-solucao__preco {
+  margin-bottom: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--cinza-borda);
+  font-family: var(--font-titulo);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--okseg-laranja-forte);
+}
+
+.card-solucao__integra {
+  font-size: var(--fs-label);
+  letter-spacing: .04em;
+  color: var(--cinza-texto);
+  margin-bottom: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--cinza-borda);
+}
+
+.card-solucao__integra strong {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--grafite);
+  margin-bottom: 2px;
+}
+
+.card-solucao .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  margin-right: var(--corte-card);
+}
+
+/* --- Tile de logotipo parceiro ------------------------------------------- */
+
+.tile-parceiro {
+  display: grid;
+  place-items: center;
+  min-height: 96px;
+  padding: var(--space-3) var(--space-2);
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius-sm);
+  transition: box-shadow var(--transicao), transform var(--transicao);
+}
+
+.tile-parceiro img {
+  max-width: 100%;
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  /* Sem grayscale: parte dos logotipos oficiais vem branca sobre fundo colorido
+     (Intelbras, PPA) e viraria um retângulo cinza. specs/design.md § 6 */
+  opacity: .82;
+  transition: opacity var(--transicao);
+}
+
+.tile-parceiro:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.tile-parceiro:hover img { opacity: 1; }
+
+/* Marca sem arquivo de logotipo — cai para o nome em texto */
+.tile-parceiro--texto {
+  font-family: var(--font-titulo);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-align: center;
+  color: var(--cinza-texto);
+}
+
+/* --- Botão flutuante WhatsApp -------------------------------------------- */
+
+.whatsapp-flutuante {
+  position: fixed;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  background: var(--whatsapp);
+  color: var(--branco);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hover);
+  transition: transform var(--transicao);
+}
+
+.whatsapp-flutuante:hover { transform: scale(1.08); }
+
+/* anel pulsante ao redor do WhatsApp */
+.whatsapp-flutuante::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, .55);
+  animation: pulso-whats 2.4s ease-out infinite;
+}
+
+@keyframes pulso-whats {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, .5); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- Botão voltar ao topo (injetado via JS) ------------------------------ */
+
+.ao-topo {
+  position: fixed;
+  right: var(--space-3);
+  bottom: calc(var(--space-3) + 56px + var(--space-2));
+  z-index: 89;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  color: var(--branco);
+  background: var(--grafite-dark);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hover);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transicao), visibility var(--transicao),
+              transform var(--transicao), background var(--transicao);
+}
+
+.ao-topo.visivel { opacity: 1; visibility: visible; transform: none; }
+.ao-topo:hover { background: var(--okseg-laranja-forte); transform: translateY(-2px); }
+
+/* --- Scroll-reveal (aplicado via JS a blocos abaixo da dobra) ------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .55s var(--ease-suave), transform .55s var(--ease-suave);
+  will-change: opacity, transform;
+}
+
+.reveal.visivel { opacity: 1; transform: none; }
+
+/* atraso em cascata para grupos (cards, módulos, tiles) */
+.reveal.atraso-1 { transition-delay: .06s; }
+.reveal.atraso-2 { transition-delay: .12s; }
+.reveal.atraso-3 { transition-delay: .18s; }
+.reveal.atraso-4 { transition-delay: .24s; }
+.reveal.atraso-5 { transition-delay: .30s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .whatsapp-flutuante::before { animation: none; }
+}
+
+/* --- Simulador de orçamento (modal) -------------------------------------- */
+
+.faixa-cta__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.simulador {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+}
+
+.simulador[hidden] { display: none; }
+
+.simulador__cortina {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, .62);
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+
+.simulador.aberto .simulador__cortina { opacity: 1; }
+
+.simulador__caixa {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100dvh - 2 * var(--space-3));
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .4);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(12px) scale(.98);
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.simulador.aberto .simulador__caixa {
+  opacity: 1;
+  transform: none;
+}
+
+.simulador__topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+}
+
+.simulador__rotulo {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--okseg-laranja-forte);
+  margin-bottom: 2px;
+}
+
+.simulador__titulo { font-size: 1.375rem; }
+
+.simulador__fechar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: var(--cinza-texto);
+  border-radius: var(--radius-sm);
+  transition: background var(--transicao), color var(--transicao);
+}
+
+.simulador__fechar:hover { background: var(--cinza-claro); color: var(--preto); }
+
+.simulador__progresso {
+  height: 4px;
+  margin-inline: var(--space-4);
+  background: var(--cinza-borda);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.simulador__barra {
+  display: block;
+  height: 100%;
+  width: 25%;
+  background: var(--okseg-laranja);
+  border-radius: inherit;
+  transition: width .28s ease;
+}
+
+.simulador__passo-info {
+  padding: var(--space-2) var(--space-4) 0;
+  font-size: var(--fs-label);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cinza-texto);
+}
+
+.simulador__form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+/* área rolável dos passos — cresce e rola entre a barra e o rodapé */
+.sim-passo {
+  display: none;
+  flex: 1;
+  min-height: 0;
+  border: 0;
+  margin: 0;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  overflow-y: auto;
+}
+
+.sim-passo.ativo { display: block; }
+
+.sim-passo__titulo {
+  font-family: var(--font-titulo);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--preto);
+  padding: 0;
+  margin-bottom: var(--space-2);
+}
+
+.sim-passo__ajuda {
+  font-size: var(--fs-small);
+  color: var(--cinza-texto);
+  margin-top: var(--space-2);
+}
+
+/* cartões do passo 1 */
+.sim-opcoes--cartao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.sim-cartao { cursor: pointer; }
+.sim-cartao input { position: absolute; opacity: 0; pointer-events: none; }
+
+.sim-cartao__corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  height: 100%;
+  padding: var(--space-3) var(--space-2);
+  text-align: center;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--grafite);
+  background: var(--cinza-claro);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  transition: border-color var(--transicao), background var(--transicao);
+}
+
+.sim-cartao__icone { font-size: 1.75rem; line-height: 1; }
+
+.sim-cartao:hover .sim-cartao__corpo { border-color: var(--cinza-borda); }
+
+.sim-cartao input:checked + .sim-cartao__corpo {
+  border-color: var(--okseg-laranja);
+  background: var(--okseg-laranja-suave);
+}
+
+.sim-cartao input:focus-visible + .sim-cartao__corpo {
+  outline: 3px solid var(--okseg-laranja);
+  outline-offset: 2px;
+}
+
+/* lista de checkboxes do passo 2 */
+.sim-opcoes--lista {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.sim-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-small);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--transicao), background var(--transicao);
+}
+
+.sim-check input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--okseg-laranja);
+}
+
+.sim-check:hover { border-color: var(--okseg-laranja); }
+
+.sim-check:has(input:checked) {
+  border-color: var(--okseg-laranja);
+  background: var(--okseg-laranja-suave);
+  font-weight: 600;
+}
+
+/* campos do passo 3 */
+.sim-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: var(--space-3);
+}
+
+.sim-campo label {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--grafite);
+}
+
+.sim-campo input {
+  padding: 12px var(--space-3);
+  font-size: 1rem;
+  color: var(--preto);
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transicao);
+}
+
+.sim-campo input:focus {
+  outline: none;
+  border-color: var(--okseg-laranja);
+}
+
+/* resumo do passo 4 */
+.sim-resumo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--fs-small);
+}
+
+.sim-resumo dt {
+  font-weight: 600;
+  color: var(--cinza-texto);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--fs-label);
+  padding-top: 3px;
+}
+
+.sim-resumo dd { margin: 0; color: var(--preto); }
+
+.sim-erro {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--okseg-laranja-hover);
+  background: var(--okseg-laranja-suave);
+  border-radius: var(--radius-sm);
+}
+
+/* rodapé de ações do modal */
+.simulador__acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  border-top: 1px solid var(--cinza-borda);
+  background: var(--branco);
+}
+
+.simulador__acoes .btn--primario { margin-left: auto; }
+.simulador__acoes .sim-enviar { gap: var(--space-1); }
+
+@media (max-width: 420px) {
+  .sim-opcoes--cartao { grid-template-columns: 1fr; }
+}
