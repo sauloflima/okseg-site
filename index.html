@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Grupo OKSEG Tecnologia | Segurança eletrônica e monitoramento 24h em Recife</title>
+<meta name="description" content="Monitoramento 24h, totem de segurança, CFTV, controle de acesso, rastreamento veicular e rádio POC. O Grupo OKSEG protege condomínios, empresas e residências em Recife, Olinda e Paulista.">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Grupo OKSEG Tecnologia">
+<meta property="og:title" content="Grupo OKSEG Tecnologia | Segurança eletrônica e monitoramento 24h">
+<meta property="og:description" content="Monitoramento 24h, totem de segurança, CFTV, controle de acesso, rastreamento veicular e rádio POC. O Grupo OKSEG protege condomínios, empresas e residências em Recife, Olinda e Paulista.">
+
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" href="assets/fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+</head>
+
+<body>
+
+<a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="container cabecalho__interno">
+
+    <a class="marca" href="index.html">
+      <img src="assets/img/logo-okseg.png" width="480" height="157"
+           alt="Grupo OKSEG — início">
+    </a>
+
+    <nav class="nav-principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="sobre.html">Sobre</a></li>
+
+        <li class="nav-drop">
+          <a class="nav-drop__gatilho" href="solucoes.html" aria-controls="menu-solucoes">
+            Soluções
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="3" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 9l7 7 7-7"/>
+            </svg>
+          </a>
+
+          <div class="nav-drop__painel" id="menu-solucoes" hidden>
+            <div class="nav-drop__grid nav-drop__grid--4">
+
+              <div>
+                <p class="nav-drop__titulo">Segurança</p>
+                <ul>
+                  <li><a href="solucoes.html#sol-monitoramento">Monitoramento 24h e Totem</a></li>
+                  <li><a href="solucoes.html#sol-cftv">CFTV IP e Câmeras</a></li>
+                  <li><a href="solucoes.html#sol-ia">Inteligência Artificial</a></li>
+                  <li><a href="solucoes.html#sol-alarme">Alarme e Fechadura Eletrônica</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="nav-drop__titulo">Condomínios</p>
+                <ul>
+                  <li><a href="fullcond.html">Plataforma FullCond</a></li>
+                  <li><a href="planos.html">Planos FullCond</a></li>
+                  <li><a href="index.html#app">Aplicativos</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="nav-drop__titulo">Conectividade</p>
+                <ul>
+                  <li><a href="solucoes.html#sol-ti">Rede e Software</a></li>
+                  <li><a href="solucoes.html#sol-fibra">Fibra Óptica</a></li>
+                  <li><a href="solucoes.html#sol-satelite">Internet via Satélite</a></li>
+                  <li><a href="solucoes.html#sol-automacao">Automação e Integração</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="nav-drop__titulo">Frota e Energia</p>
+                <ul>
+                  <li><a href="solucoes.html#sol-rastreamento">Rastreamento Veicular</a></li>
+                  <li><a href="solucoes.html#sol-radio">Rádio POC</a></li>
+                  <li><a href="solucoes.html#sol-solar">Energia Solar</a></li>
+                  <li><a href="solucoes.html#sol-eletroposto">OK Eletroposto</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li><a href="fullcond.html">FullCond</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="cabecalho__acoes">
+      <a class="btn-pilula" href="area-cliente.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        Área do Cliente
+      </a>
+      <a class="btn btn--primario" href="#contato">Fale Conosco</a>
+    </div>
+
+    <button class="btn-hamburguer" id="abrir-menu" aria-label="Abrir menu"
+            aria-expanded="false" aria-controls="painel-mobile">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+
+  </div>
+</header>
+
+<div class="cortina" id="cortina" hidden></div>
+
+<aside class="painel-mobile" id="painel-mobile" aria-label="Menu" aria-hidden="true">
+  <div class="painel-mobile__topo">
+    <span class="marca">
+      <img src="assets/img/logo-okseg.png" width="480" height="157" alt="Grupo OKSEG">
+    </span>
+    <button class="btn-hamburguer" id="fechar-menu" aria-label="Fechar menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <nav aria-label="Navegação mobile">
+    <a href="sobre.html">Sobre</a>
+
+    <div class="nav-mob-drop">
+      <button class="nav-mob-drop__gatilho" aria-expanded="false" aria-controls="mob-solucoes">
+        Soluções
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="3" stroke-linecap="round" aria-hidden="true">
+          <path d="M5 9l7 7 7-7"/>
+        </svg>
+      </button>
+      <div class="nav-mob-drop__painel" id="mob-solucoes" data-aberto="false"><div>
+        <a class="nav-mob-drop__todas" href="solucoes.html">Ver todas as soluções &rarr;</a>
+        <p class="nav-drop__titulo">Segurança</p>
+        <a href="solucoes.html#sol-monitoramento">Monitoramento 24h e Totem</a>
+        <a href="solucoes.html#sol-cftv">CFTV IP e Câmeras</a>
+        <a href="solucoes.html#sol-ia">Inteligência Artificial</a>
+        <a href="solucoes.html#sol-alarme">Alarme e Fechadura Eletrônica</a>
+
+        <p class="nav-drop__titulo">Condomínios</p>
+        <a href="fullcond.html">Plataforma FullCond</a>
+        <a href="planos.html">Planos FullCond</a>
+        <a href="index.html#app">Aplicativos</a>
+
+        <p class="nav-drop__titulo">Conectividade</p>
+        <a href="solucoes.html#sol-ti">Rede e Software</a>
+        <a href="solucoes.html#sol-fibra">Fibra Óptica</a>
+        <a href="solucoes.html#sol-satelite">Internet via Satélite</a>
+        <a href="solucoes.html#sol-automacao">Automação e Integração</a>
+
+        <p class="nav-drop__titulo">Frota e Energia</p>
+        <a href="solucoes.html#sol-rastreamento">Rastreamento Veicular</a>
+        <a href="solucoes.html#sol-radio">Rádio POC</a>
+        <a href="solucoes.html#sol-solar">Energia Solar</a>
+        <a href="solucoes.html#sol-eletroposto">OK Eletroposto</a>
+      </div></div>
+    </div>
+
+    <a href="fullcond.html">FullCond</a>
+    <a href="planos.html">Planos</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <div class="painel-mobile__acoes">
+    <a class="btn-pilula" href="area-cliente.html">Área do Cliente / Login no App</a>
+    <a class="btn btn--primario btn--largo" href="#contato">Fale Conosco</a>
+  </div>
+</aside>
+
+
+<main id="conteudo">
+
+<!-- =========================================================================
+     HERO / SLIDER — banner com foto real
+     ========================================================================= -->
+<section class="hero" id="topo" aria-roledescription="carrossel"
+         aria-label="Destaques do Grupo OKSEG">
+
+  <div class="hero__fundo" aria-hidden="true"></div>
+
+  <article class="hero__slide ativo" role="group"
+           aria-roledescription="slide" aria-label="1 de 3">
+    <div class="container hero__grid">
+      <div class="hero__conteudo">
+        <span class="hero__rotulo"><i aria-hidden="true"></i>Monitoramento 24 horas</span>
+        <h1 class="hero__titulo">
+          <span class="leve">Segurança que</span>
+          <span class="forte">nunca dorme</span>
+          <span class="forte destaque">no seu patrimônio</span>
+        </h1>
+        <p class="hero__texto">
+          Central própria dia e noite, com imagens ao vivo e gravação em nuvem. Quando algo
+          dispara, a nossa viatura vai ao local — em toda a Região Metropolitana do Recife.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primario" href="solucoes.html">Conheça as Soluções</a>
+          <a class="btn btn--contorno-claro" href="#contato" data-abrir-simulador>Solicite um Orçamento</a>
+        </div>
+      </div>
+      <figure class="hero__painel">
+        <img src="assets/img/hero/monitoramento.jpg" width="720" height="900"
+             alt="Totem de segurança e viatura do Grupo OKSEG monitorando uma via urbana"
+             fetchpriority="high">
+      </figure>
+    </div>
+  </article>
+
+  <article class="hero__slide" role="group"
+           aria-roledescription="slide" aria-label="2 de 3">
+    <div class="container hero__grid">
+      <div class="hero__conteudo">
+        <span class="hero__rotulo"><i aria-hidden="true"></i>Totem de Segurança</span>
+        <h2 class="hero__titulo">
+          <span class="leve">Sua rua vigiada</span>
+          <span class="forte">a partir de</span>
+          <span class="forte destaque">R$ 299</span>
+        </h2>
+        <p class="hero__texto">
+          Torre com câmeras, giroflex de alerta e imagens ao vivo no celular. Instalada na
+          frente do comércio, da empresa ou do condomínio.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primario" href="solucoes.html#sol-monitoramento">Ver o Totem</a>
+          <a class="btn btn--contorno-claro" href="#contato" data-abrir-simulador>Quero um Orçamento</a>
+        </div>
+      </div>
+      <figure class="hero__painel">
+        <img src="assets/img/hero/totem.jpg" width="720" height="900"
+             alt="Totem de segurança do Grupo OKSEG instalado em frente a um comércio"
+             loading="lazy">
+      </figure>
+    </div>
+  </article>
+
+  <article class="hero__slide" role="group"
+           aria-roledescription="slide" aria-label="3 de 3">
+    <div class="container hero__grid">
+      <div class="hero__conteudo">
+        <span class="hero__rotulo"><i aria-hidden="true"></i>Plataforma FullCond</span>
+        <h2 class="hero__titulo">
+          <span class="leve">Portaria remota</span>
+          <span class="forte">para o seu</span>
+          <span class="forte destaque">condomínio</span>
+        </h2>
+        <p class="hero__texto">
+          Controle de acesso facial, entrada assistida e gestão completa no aplicativo — com
+          uma central acompanhando a portaria em tempo real.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primario" href="fullcond.html">Conheça o FullCond</a>
+          <a class="btn btn--contorno-claro" href="#contato" data-abrir-simulador>Solicite uma Demonstração</a>
+        </div>
+      </div>
+      <figure class="hero__painel">
+        <img src="assets/img/hero/central.jpg" width="720" height="900"
+             alt="Totem de segurança do Grupo OKSEG instalado na entrada de um condomínio"
+             loading="lazy">
+      </figure>
+    </div>
+  </article>
+
+  <div class="hero__navegacao" role="tablist" aria-label="Selecionar slide">
+    <button class="hero__ponto" role="tab" aria-current="true" aria-label="Slide 1"></button>
+    <button class="hero__ponto" role="tab" aria-current="false" aria-label="Slide 2"></button>
+    <button class="hero__ponto" role="tab" aria-current="false" aria-label="Slide 3"></button>
+  </div>
+
+</section>
+
+
+<!-- =========================================================================
+     DIFERENCIAIS — por que o Grupo OKSEG (fatos, sem número inventado)
+     ========================================================================= -->
+<section class="secao secao--clara" id="diferenciais">
+  <div class="container">
+
+    <h2 class="secao__titulo">
+      <span class="leve">Por que o</span>
+      <span class="forte destaque">Grupo OKSEG</span>
+    </h2>
+
+    <p class="secao__intro">
+      Tecnologia que já está na rua — instalada, monitorada e atendida por quem é daqui,
+      na Região Metropolitana do Recife.
+    </p>
+
+    <div class="grid-diferenciais">
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V13l1.7-4.4A2 2 0 0 1 7.6 7.3h8.8a2 2 0 0 1 1.9 1.3L20 13v3.5"/><path d="M4 13h16"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/><path d="M9 4.6h6"/></svg>
+        </span>
+        <div>
+          <h3>Viatura própria na RMR</h3>
+          <p>Quando o alarme dispara, a nossa equipe vai ao local. Viatura própria cobrindo Recife, Olinda, Paulista e região.</p>
+        </div>
+      </div>
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.6"/><rect x="17.5" y="13" width="4" height="6" rx="1.6"/><path d="M20 19v.6a2.4 2.4 0 0 1-2.4 2.4H13"/></svg>
+        </span>
+        <div>
+          <h3>Suporte local, sem call center</h3>
+          <p>Você fala direto com quem projetou e instalou o seu sistema — nada de fila de atendimento terceirizado em outro estado.</p>
+        </div>
+      </div>
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </span>
+        <div>
+          <h3>Monitoramento 24 horas</h3>
+          <p>Central própria com imagens ao vivo, gravação em nuvem e acionamento imediato da polícia, dia e noite.</p>
+        </div>
+      </div>
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.2 12l1.9 1.9 3.7-3.7"/></svg>
+        </span>
+        <div>
+          <h3>Conformidade com a LGPD</h3>
+          <p>Para o síndico apresentar em assembleia sem receio: dados tratados conforme a lei, com a documentação pronta.</p>
+        </div>
+      </div>
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V4h6v3M9 17v3h6v-3"/><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M8 12h8"/></svg>
+        </span>
+        <div>
+          <h3>Integra com o que você já tem</h3>
+          <p>Hikvision, Intelbras, Control iD e outros — aproveitamos o que já está instalado, sem trocar tudo.</p>
+        </div>
+      </div>
+
+      <div class="diferencial">
+        <span class="diferencial__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+        </span>
+        <div>
+          <h3>Uma empresa, todas as frentes</h3>
+          <p>Segurança, tecnologia e energia num fornecedor só — menos contratos, mais controle.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     SOLUÇÕES (resumo) — detalhe completo em solucoes.html
+     ========================================================================= -->
+<section class="secao" id="solucoes">
+  <div class="container">
+
+    <div class="badge-secao">
+      <img class="badge-secao__marca" src="assets/img/favicon-64.png"
+           width="64" height="64" alt="" aria-hidden="true">
+      <span class="badge-secao__texto">Soluções</span>
+    </div>
+
+    <h2 class="secao__titulo">
+      <span class="leve">Uma empresa só para</span>
+      <span class="forte">tudo o que precisa de segurança</span>
+    </h2>
+
+    <p class="secao__intro">
+      Do totem na calçada ao controle de acesso do condomínio, do rastreador do caminhão ao
+      rádio da equipe. O Grupo OKSEG projeta, instala e monitora.
+    </p>
+
+    <div class="grid-tiles-sol">
+      <a class="tile-sol" href="solucoes.html#sol-monitoramento">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2v20"/><path d="M8.5 6.5h7M8.5 11h7"/><circle cx="12" cy="4" r="1.6"/><path d="M6 6.5c-1.6 1.2-2.6 3.2-2.6 5.4M18 6.5c1.6 1.2 2.6 3.2 2.6 5.4"/><path d="M9 22h6"/>
+        </svg>
+        <span class="tile-sol__nome">Monitoramento 24h e Totem de Segurança</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-cftv">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 7.5l14-3.5 1.4 5.6-14 3.5z"/><path d="M4.4 13.1L5.6 18"/><path d="M3.2 18h5"/><path d="M18.4 9.6l3.1-.8"/><circle cx="7.2" cy="9.2" r="1"/>
+        </svg>
+        <span class="tile-sol__nome">CFTV IP e Câmeras de Segurança</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-ia">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M3 12H1M23 12h-2"/>
+        </svg>
+        <span class="tile-sol__nome">Inteligência Artificial</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-fullcond">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 21h18"/><path d="M5 21V6.5L12 3l7 3.5V21"/><path d="M9 21v-4.5h6V21"/><path d="M9 9h2M13 9h2M9 12.5h2M13 12.5h2"/>
+        </svg>
+        <span class="tile-sol__nome">Gestão Condominial FullCond</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-ti">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2.5" y="4" width="19" height="12.5" rx="2"/>
+          <path d="M8 20.5h8M12 16.5v4"/>
+          <path d="M7.5 12.2l-1.8-1.9 1.8-1.9M16.5 8.4l1.8 1.9-1.8 1.9M13.4 7.6l-2.8 5.4"/>
+        </svg>
+        <span class="tile-sol__nome">Assistência em Rede e Software</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-fibra">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 5c7 0 7 7 14 7M3 12c5 0 5 7 10 7M3 19h6"/><circle cx="19" cy="12" r="1.6"/><circle cx="16" cy="19" r="1.6"/>
+        </svg>
+        <span class="tile-sol__nome">Fibra Óptica</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-satelite">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20a8 8 0 0 0-8-8M12 20a5 5 0 0 0-5-5"/><circle cx="6.5" cy="18.5" r="1.6"/><path d="M14 3.5l3.5 3.5-4 4-3.5-3.5z"/><path d="M15 9l4.5 4.5"/>
+        </svg>
+        <span class="tile-sol__nome">Internet via Satélite</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-automacao">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h5M15 7h5"/><circle cx="12" cy="7" r="2.4"/><path d="M4 17h9M19 17h1"/><circle cx="16" cy="17" r="2.4"/>
+        </svg>
+        <span class="tile-sol__nome">Automação e Integração</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-rastreamento">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10.4c0 4.9-6.5 10.6-6.5 10.6S7 15.3 7 10.4a6.5 6.5 0 1 1 13 0z"/><circle cx="13.5" cy="10.2" r="2.3"/><path d="M4 6.5H2M5 10.5H2M6 14.5H3"/>
+        </svg>
+        <span class="tile-sol__nome">Rastreamento Veicular</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-radio">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M12 2.5V.8"/><path d="M9.6 6.5h4.8"/><rect x="9.6" y="9.5" width="4.8" height="4" rx=".8"/><path d="M9.6 16.5h1.6M12.8 16.5h1.6"/>
+        </svg>
+        <span class="tile-sol__nome">Rádio Profissional POC</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-alarme">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4.5" y="10" width="15" height="11" rx="2.2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.4" r="1.5"/>
+        </svg>
+        <span class="tile-sol__nome">Alarme e Fechadura Eletrônica</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-solar">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 15.5h16l-1.6-8H5.6z"/><path d="M9.4 7.5L8.6 15.5M14.6 7.5l.8 8M4.9 11.5h14.2"/><path d="M12 19v3M8 22h8"/><path d="M12 2v2.4M5.6 3.6l1.2 1.2M18.4 3.6l-1.2 1.2"/>
+        </svg>
+        <span class="tile-sol__nome">Energia Solar</span>
+      </a>
+      <a class="tile-sol" href="solucoes.html#sol-eletroposto">
+        <svg class="card-solucao__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="3" width="10" height="18" rx="2"/><path d="M4 8.5h10"/><path d="M9.6 12l-1.8 3h2.4l-1.4 3"/><path d="M14 11h3a2 2 0 0 1 2 2v3.2a1.8 1.8 0 0 0 3.6 0V9.5"/><path d="M20.6 6v3.5"/>
+        </svg>
+        <span class="tile-sol__nome">OK Eletroposto</span>
+      </a>
+    </div>
+
+    <div class="solucoes__rodape">
+      <a class="btn btn--primario" href="solucoes.html">Ver todas as soluções</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     COMO FUNCIONA — 4 passos
+     ========================================================================= -->
+<section class="secao secao--clara" id="como-funciona">
+  <div class="container">
+
+    <h2 class="secao__titulo">
+      <span class="leve">Da primeira visita ao</span>
+      <span class="forte destaque">monitoramento no ar</span>
+    </h2>
+
+    <p class="secao__intro">
+      Um caminho simples e sem surpresa — você acompanha cada etapa.
+    </p>
+
+    <div class="grid-passos">
+
+      <div class="passo-como">
+        <span class="passo-como__num">1</span>
+        <h3>Levantamento</h3>
+        <p>Visita técnica para entender o local e aproveitar o que já está instalado.</p>
+      </div>
+
+      <div class="passo-como">
+        <span class="passo-como__num">2</span>
+        <h3>Proposta sob medida</h3>
+        <p>Você recebe um plano com escopo, equipamentos e prazos claros.</p>
+      </div>
+
+      <div class="passo-como">
+        <span class="passo-como__num">3</span>
+        <h3>Instalação acompanhada</h3>
+        <p>Equipe própria instala e configura, seguindo um cronograma combinado.</p>
+      </div>
+
+      <div class="passo-como">
+        <span class="passo-como__num">4</span>
+        <h3>Monitoramento e suporte</h3>
+        <p>A central acompanha o dia a dia e o suporte fica à disposição.</p>
+      </div>
+
+    </div>
+
+    <div class="solucoes__rodape">
+      <button type="button" class="btn btn--primario" data-abrir-simulador>
+        Começar meu orçamento
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     INTEGRAÇÕES
+     ========================================================================= -->
+<section class="secao" id="integracoes">
+  <div class="container">
+
+    <div class="badge-secao">
+      <img class="badge-secao__marca" src="assets/img/favicon-64.png"
+           width="64" height="64" alt="" aria-hidden="true">
+      <span class="badge-secao__texto">Integrações</span>
+    </div>
+
+    <h2 class="secao__titulo">
+      <span class="leve">Compatível com quem</span>
+      <span class="forte">o mercado já usa</span>
+    </h2>
+
+    <p class="secao__intro">
+      Na maioria dos casos não é preciso trocar o que já está instalado. O Grupo OKSEG
+      trabalha com os principais fabricantes de segurança eletrônica do país.
+    </p>
+
+    <div class="grid-parceiros">
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/hikvision.png" width="486" height="96" alt="Hikvision"
+             loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/intelbras.png" width="497" height="96" alt="Intelbras"
+             loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/control-id.png" width="578" height="96" alt="Control iD"
+             loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/ppa.png" width="307" height="96" alt="PPA" loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/bravas.png" width="416" height="96" alt="Bravas"
+             loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/avicam.png" width="412" height="96" alt="Avicam"
+             loading="lazy">
+      </div>
+      <div class="tile-parceiro">
+        <img src="assets/img/parceiros/tecnovoz.png" width="257" height="96" alt="TecnoVoz"
+             loading="lazy">
+      </div>
+      <!-- ⚠️ PENDENTE: logotipos ainda não recebidos — seguem como texto. -->
+      <div class="tile-parceiro tile-parceiro--texto">pxTalk</div>
+      <div class="tile-parceiro tile-parceiro--texto">Motorola</div>
+      <div class="tile-parceiro tile-parceiro--texto">Biccateca</div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="secao secao--escura" id="app">
+  <div class="container">
+
+    <div class="badge-secao">
+      <img class="badge-secao__marca" src="assets/img/favicon-64.png"
+           width="64" height="64" alt="" aria-hidden="true">
+      <span class="badge-secao__texto">Aplicativos</span>
+    </div>
+
+    <h2 class="secao__titulo">
+      <span class="leve">Sua segurança</span>
+      <span class="forte destaque">no seu bolso</span>
+    </h2>
+
+    <div class="apps__grid">
+
+      <!-- ⚠️ PENDENTE: quando o cliente enviar as capturas reais do app, trocar
+           este dispositivo de marca por um <img> da tela do App FullCond. -->
+      <div class="apps__mockup" aria-hidden="true">
+        <div class="fone">
+          <div class="fone__tela">
+            <img class="fone__marca" src="assets/img/favicon-64.png"
+                 width="64" height="64" alt="">
+            <span class="fone__nome">FullCond</span>
+            <span class="fone__tag">Seu condomínio na palma da mão</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="apps__publicos">
+
+        <div class="bloco-publico">
+          <span class="bloco-publico__rotulo">Síndico e Administradora</span>
+          <h3>Gestão na mão</h3>
+          <p>
+            Acompanhe acessos, encomendas, reservas e comunicados em tempo real —
+            do celular ou do computador.
+          </p>
+          <div class="bloco-publico__links">
+            <!-- TODO: URLs reais das lojas e do portal -->
+            <a class="link-loja" href="#TODO-url-app-store">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.4s-2.3-.9-2.3-3.3zM14.2 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
+              </svg>
+              <span><small>Baixar na</small>App Store</span>
+            </a>
+            <a class="link-loja" href="#TODO-url-google-play">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3z"/>
+                <path d="M16 15.3l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1z"/>
+                <path d="M16.1 15.2L12.9 12l-9.3 9.3c.4.4 1 .4 1.7 0l10.8-6.1"/>
+                <path d="M16.1 8.8L5.3 2.7c-.7-.4-1.3-.4-1.7 0L12.9 12l3.2-3.2z"/>
+              </svg>
+              <span><small>Disponível no</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bloco-publico">
+          <span class="bloco-publico__rotulo">Morador</span>
+          <h3>Autonomia total</h3>
+          <p>
+            Libere visitantes pelo WhatsApp, retire encomendas, reserve o salão e entre
+            sem chave nem controle remoto.
+          </p>
+          <div class="bloco-publico__links">
+            <a class="link-loja" href="#TODO-url-app-store">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.4s-2.3-.9-2.3-3.3zM14.2 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
+              </svg>
+              <span><small>Baixar na</small>App Store</span>
+            </a>
+            <a class="link-loja" href="#TODO-url-google-play">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3z"/>
+                <path d="M16 15.3l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1z"/>
+                <path d="M16.1 15.2L12.9 12l-9.3 9.3c.4.4 1 .4 1.7 0l10.8-6.1"/>
+                <path d="M16.1 8.8L5.3 2.7c-.7-.4-1.3-.4-1.7 0L12.9 12l3.2-3.2z"/>
+              </svg>
+              <span><small>Disponível no</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="apps__ja-cliente">
+      Já é cliente?
+      <a href="area-cliente.html" class="btn btn--texto btn--texto-claro">
+        Acesse a Área do Cliente
+      </a>
+    </p>
+
+  </div>
+</section>
+
+
+<section class="faixa-cta" id="contato">
+  <div class="container faixa-cta__interno">
+    <div>
+      <h2>Vamos proteger o que é seu?</h2>
+      <p>
+        Conte o que você precisa — condomínio, empresa, casa ou frota. Quem atende é a nossa
+        equipe aqui do Recife, e a proposta sai com prazo definido e sem compromisso.
+      </p>
+    </div>
+    <div class="faixa-cta__acoes">
+      <button type="button" class="btn btn--contorno-claro" data-abrir-simulador>
+        Simular meu Orçamento
+      </button>
+      <a class="btn btn--texto btn--texto-claro" href="https://wa.me/5581992271976"
+         target="_blank" rel="noopener">
+        ou fale direto no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="rodape">
+  <div class="container">
+
+    <div class="rodape__grid">
+
+      <div class="rodape__sobre">
+        <span class="marca marca--clara">
+          <img src="assets/img/logo-okseg-claro.png" width="480" height="157"
+               alt="Grupo OKSEG">
+        </span>
+        <p>
+          Segurança eletrônica, monitoramento 24h e tecnologia para condomínios, empresas
+          e residências. Atendimento em Recife, Olinda, Paulista e região.
+        </p>
+        <p class="rodape__slogan">Sempre de olho em sua segurança.</p>
+        <!-- TODO: URLs reais das redes sociais -->
+        <div class="redes">
+          <a href="#TODO-url-facebook" aria-label="Facebook da OKSEG">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23v2.36H7.4V13h2.72v8h3.38z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/grupookseg/" target="_blank" rel="noopener" aria-label="Instagram do Grupo OKSEG">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="3.8"/>
+              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#TODO-url-youtube" aria-label="YouTube da OKSEG">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 12s0-3.2-.4-4.7c-.23-.85-.9-1.5-1.75-1.73C18.28 5.2 12 5.2 12 5.2s-6.28 0-7.85.37c-.85.23-1.52.88-1.75 1.73C2 8.8 2 12 2 12s0 3.2.4 4.7c.23.85.9 1.5 1.75 1.73 1.57.37 7.85.37 7.85.37s6.28 0 7.85-.37c.85-.23 1.52-.88 1.75-1.73.4-1.5.4-4.7.4-4.7zM10 15.1V8.9l5.2 3.1-5.2 3.1z"/>
+            </svg>
+          </a>
+          <a href="#TODO-url-linkedin" aria-label="LinkedIn da OKSEG">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.94 8.5H3.9V21h3.04V8.5zM5.42 3a1.77 1.77 0 1 0 0 3.53 1.77 1.77 0 0 0 0-3.53zM21 14.1c0-3.3-1.77-4.85-4.13-4.85-1.9 0-2.76 1.05-3.23 1.78V8.5H10.6V21h3.04v-6.9c0-1.53.29-3 2.18-3 1.87 0 1.9 1.74 1.9 3.1V21H21v-6.9z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="rodape__titulo">Soluções</p>
+        <ul class="rodape__links">
+          <li><a href="solucoes.html#sol-monitoramento">Monitoramento 24h e Totem</a></li>
+          <li><a href="solucoes.html#sol-cftv">CFTV IP e Câmeras</a></li>
+          <li><a href="solucoes.html#sol-ia">Inteligência Artificial</a></li>
+          <li><a href="fullcond.html">FullCond — Condomínios</a></li>
+          <li><a href="solucoes.html#sol-rastreamento">Rastreamento Veicular</a></li>
+          <li><a href="solucoes.html#sol-radio">Rádio POC</a></li>
+          <li><a href="solucoes.html#sol-alarme">Alarme e Fechadura</a></li>
+          <li><a href="solucoes.html#sol-ti">Rede e Software</a></li>
+          <li><a href="solucoes.html#sol-fibra">Fibra Óptica</a></li>
+          <li><a href="solucoes.html#sol-satelite">Internet via Satélite</a></li>
+          <li><a href="solucoes.html#sol-automacao">Automação e Integração</a></li>
+          <li><a href="solucoes.html#sol-solar">Energia Solar</a></li>
+          <li><a href="solucoes.html#sol-eletroposto">OK Eletroposto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="rodape__titulo">Institucional</p>
+        <ul class="rodape__links">
+          <li><a href="sobre.html">Sobre o Grupo OKSEG</a></li>
+          <li><a href="fullcond.html">Plataforma FullCond</a></li>
+          <li><a href="planos.html">Planos FullCond</a></li>
+          <li><a href="index.html#integracoes">Integrações</a></li>
+          <li><a href="index.html#app">Aplicativos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="area-cliente.html">Área do Cliente</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="rodape__titulo">Fale Conosco</p>
+        <!-- TODO: telefone, WhatsApp, e-mail e endereço reais — pendência #5. -->
+        <ul class="rodape__contatos">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.9.35 1.8.67 2.65a2 2 0 0 1-.45 2.11L8.1 9.7a16 16 0 0 0 6 6l1.24-1.24a2 2 0 0 1 2.11-.45c.85.32 1.75.55 2.65.67a2 2 0 0 1 1.7 2.02z"/>
+            </svg>
+            <a href="tel:+5581992271976">(81) 99227-1976</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
+              <path d="M3 7l9 6 9-6"/>
+            </svg>
+            <a href="#TODO-email">E-mail comercial</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20 10.5c0 5.4-8 12-8 12s-8-6.6-8-12a8 8 0 1 1 16 0z"/>
+              <circle cx="12" cy="10.3" r="2.8"/>
+            </svg>
+            <span>Endereço da OKSEG</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="rodape__base">
+      <p>© <span id="ano">2026</span> Grupo OKSEG Tecnologia. Todos os direitos reservados.</p>
+      <p><a href="#TODO-url-politica-privacidade">Política de Privacidade</a></p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- =========================================================================
+     SIMULADOR DE ORÇAMENTO — modal de 4 passos → WhatsApp
+     ========================================================================= -->
+<div class="simulador" id="simulador" role="dialog" aria-modal="true"
+     aria-labelledby="sim-titulo" hidden>
+  <div class="simulador__cortina" data-fechar-simulador></div>
+
+  <div class="simulador__caixa" role="document">
+
+    <header class="simulador__topo">
+      <div>
+        <p class="simulador__rotulo">Orçamento rápido</p>
+        <h2 class="simulador__titulo" id="sim-titulo">Monte a sua proposta</h2>
+      </div>
+      <button type="button" class="simulador__fechar" data-fechar-simulador
+              aria-label="Fechar simulador">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <!-- barra de progresso -->
+    <div class="simulador__progresso" aria-hidden="true">
+      <span class="simulador__barra" id="sim-barra"></span>
+    </div>
+    <p class="simulador__passo-info">
+      Passo <span id="sim-passo-num">1</span> de 4
+    </p>
+
+    <form class="simulador__form" id="sim-form" novalidate>
+
+      <!-- PASSO 1 — o que proteger -->
+      <fieldset class="sim-passo ativo" data-passo="1">
+        <legend class="sim-passo__titulo">O que você quer proteger?</legend>
+        <div class="sim-opcoes sim-opcoes--cartao" role="radiogroup" aria-label="Tipo de local">
+          <label class="sim-cartao">
+            <input type="radio" name="perfil" value="Condomínio" required>
+            <span class="sim-cartao__corpo">
+              <span class="sim-cartao__icone" aria-hidden="true">🏢</span>
+              <span class="sim-cartao__nome">Condomínio</span>
+            </span>
+          </label>
+          <label class="sim-cartao">
+            <input type="radio" name="perfil" value="Empresa ou comércio">
+            <span class="sim-cartao__corpo">
+              <span class="sim-cartao__icone" aria-hidden="true">🏪</span>
+              <span class="sim-cartao__nome">Empresa ou comércio</span>
+            </span>
+          </label>
+          <label class="sim-cartao">
+            <input type="radio" name="perfil" value="Residência">
+            <span class="sim-cartao__corpo">
+              <span class="sim-cartao__icone" aria-hidden="true">🏠</span>
+              <span class="sim-cartao__nome">Residência</span>
+            </span>
+          </label>
+          <label class="sim-cartao">
+            <input type="radio" name="perfil" value="Frota ou veículo">
+            <span class="sim-cartao__corpo">
+              <span class="sim-cartao__icone" aria-hidden="true">🚚</span>
+              <span class="sim-cartao__nome">Frota ou veículo</span>
+            </span>
+          </label>
+        </div>
+        <p class="sim-erro" data-erro-passo="1" hidden>Escolha uma opção para continuar.</p>
+      </fieldset>
+
+      <!-- PASSO 2 — quais soluções -->
+      <fieldset class="sim-passo" data-passo="2">
+        <legend class="sim-passo__titulo">Quais soluções te interessam?</legend>
+        <p class="sim-passo__ajuda">Pode marcar mais de uma.</p>
+        <div class="sim-opcoes sim-opcoes--lista">
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Monitoramento 24h e Totem">
+            <span>Monitoramento 24h e Totem</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="CFTV e Câmeras">
+            <span>CFTV e Câmeras</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Controle de acesso (FullCond)">
+            <span>Controle de acesso (FullCond)</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Rastreamento veicular">
+            <span>Rastreamento veicular</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Rádio POC">
+            <span>Rádio POC</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Alarme e fechadura">
+            <span>Alarme e fechadura eletrônica</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Energia solar">
+            <span>Energia solar</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Rede e software">
+            <span>Rede e software</span>
+          </label>
+          <label class="sim-check">
+            <input type="checkbox" name="solucoes" value="Ainda não sei, quero orientação">
+            <span>Ainda não sei, quero orientação</span>
+          </label>
+        </div>
+        <p class="sim-erro" data-erro-passo="2" hidden>Marque ao menos uma solução.</p>
+      </fieldset>
+
+      <!-- PASSO 3 — contato -->
+      <fieldset class="sim-passo" data-passo="3">
+        <legend class="sim-passo__titulo">Para onde enviamos a proposta?</legend>
+        <div class="sim-campo">
+          <label for="sim-nome">Seu nome</label>
+          <input type="text" id="sim-nome" name="nome" autocomplete="name"
+                 placeholder="Como podemos te chamar?" required>
+        </div>
+        <div class="sim-campo">
+          <label for="sim-telefone">WhatsApp com DDD</label>
+          <input type="tel" id="sim-telefone" name="telefone" autocomplete="tel"
+                 inputmode="numeric" placeholder="(81) 9 9999-9999" required>
+        </div>
+        <p class="sim-erro" data-erro-passo="3" hidden>Preencha nome e um WhatsApp válido.</p>
+        <p class="sim-passo__ajuda">
+          Ao continuar, você abre uma conversa no WhatsApp com o seu resumo já preenchido.
+          Sem cadastro e sem compromisso.
+        </p>
+      </fieldset>
+
+      <!-- PASSO 4 — resumo -->
+      <fieldset class="sim-passo" data-passo="4">
+        <legend class="sim-passo__titulo">Confira o seu resumo</legend>
+        <dl class="sim-resumo" id="sim-resumo"></dl>
+        <p class="sim-passo__ajuda">
+          Está tudo certo? É só enviar que a nossa equipe continua por lá.
+        </p>
+      </fieldset>
+
+      <footer class="simulador__acoes">
+        <button type="button" class="btn btn--texto" id="sim-voltar" hidden>Voltar</button>
+        <button type="button" class="btn btn--primario" id="sim-avancar">Continuar</button>
+        <button type="submit" class="btn btn--primario sim-enviar" id="sim-enviar" hidden>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.4 13.99c-.25.7-1.44 1.34-2 1.42-.51.07-1.16.1-1.87-.12-.43-.13-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.76-2.18 1.03-2.48c.27-.3.59-.37.78-.37l.56.01c.18.01.42-.07.66.5.25.6.84 2.07.91 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.44.51c-.15.15-.3.31-.13.61.18.3.79 1.3 1.69 2.1 1.16 1.04 2.14 1.36 2.44 1.51.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/>
+          </svg>
+          Enviar no WhatsApp
+        </button>
+      </footer>
+    </form>
+  </div>
+</div>
+
+
+<a class="whatsapp-flutuante" href="https://wa.me/5581992271976" target="_blank" rel="noopener" aria-label="Falar com a OKSEG no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.24-.85.84-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.47-.29z"/>
+  </svg>
+</a>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Schema.org — dados confirmados. TODO: acrescentar "url" e "logo" quando o domínio existir. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Grupo OKSEG Tecnologia",
+  "description": "Segurança eletrônica, monitoramento 24h, tecnologia e energia para condomínios, empresas e residências em Recife, Olinda, Paulista e região.",
+  "telephone": "+55-81-99227-1976",
+  "areaServed": ["Recife", "Olinda", "Paulista", "Pernambuco"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Recife",
+    "addressRegion": "PE",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/grupookseg/"],
+  "slogan": "Sempre de olho em sua segurança."
+}
+</script>
+
+
+</body>
+</html>
