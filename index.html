@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mari's Cookies — Cookies artesanais feitos em pequenos lotes</title>
+<meta name="description" content="Cookies artesanais de fermentação lenta, feitos em pequenos lotes com chocolate belga, manteiga francesa e ingredientes selecionados. Brasília · DF.">
+<meta property="og:title" content="Mari's Cookies">
+<meta property="og:description" content="Cookies artesanais feitos em pequenos lotes.">
+<meta property="og:image" content="img/cookies.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:   '#FAF5EC',
+        sand:    '#F1E7D6',
+        caramel: '#C9A47A',
+        gold:    '#B2885A',
+        cocoa:   '#6B4F35',
+        espresso:'#3B2A1D',
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        script:  ['Parisienne', 'cursive'],
+        sans:    ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: { widest: '.28em' },
+    }
+  }
+}
+</script>
+<style type="text/tailwindcss">
+  @layer base {
+    body { @apply bg-cream text-cocoa font-sans font-light antialiased; }
+    ::selection { @apply bg-caramel/30 text-espresso; }
+    :focus-visible { @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-cream rounded-sm; }
+  }
+  @layer components {
+    .eyebrow { @apply text-[11px] uppercase tracking-widest text-gold; }
+    .rule    { @apply block h-px w-14 bg-caramel/60; }
+  }
+  /* reveal on scroll */
+  [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.6,.2,1), transform 1s cubic-bezier(.2,.6,.2,1); }
+  [data-reveal].is-in { opacity: 1; transform: none; }
+  [data-reveal][data-delay="1"] { transition-delay: .12s }
+  [data-reveal][data-delay="2"] { transition-delay: .24s }
+  [data-reveal][data-delay="3"] { transition-delay: .36s }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto }
+    [data-reveal] { opacity: 1; transform: none; transition: none }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ░░ HEADER ░░ -->
+<header id="topo" class="fixed inset-x-0 top-0 z-50 transition-all duration-500" data-header>
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
+    <a href="#topo" class="flex items-center gap-3 py-2" aria-label="Mari's Cookies — início">
+      <img src="img/logo.png" alt="" class="h-10 w-auto md:h-12 mix-blend-multiply" onerror="this.remove();document.getElementById('wordmark').classList.remove('hidden')">
+      <span id="wordmark" class="hidden font-script text-3xl leading-none text-cocoa md:text-4xl">Mari's</span>
+      <span class="sr-only">Mari's Cookies</span>
+    </a>
+
+    <nav class="hidden items-center gap-10 md:flex" aria-label="Principal">
+      <a href="#marca"    class="text-sm tracking-wide transition-colors hover:text-gold">A Marca</a>
+      <a href="#sabores"  class="text-sm tracking-wide transition-colors hover:text-gold">Sabores</a>
+      <a href="#contato"  class="text-sm tracking-wide transition-colors hover:text-gold">Contato</a>
+    </nav>
+
+    <a href="https://wa.me/5561991212362?text=Ol%C3%A1%2C%20Mari!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20cookies."
+       target="_blank" rel="noopener"
+       class="group inline-flex items-center gap-2 rounded-full border border-cocoa/25 px-5 py-[13px] text-[11px] uppercase tracking-widest text-cocoa transition-all duration-300 hover:border-cocoa hover:bg-cocoa hover:text-cream">
+      <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+      Pedidos
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ░░ HERO ░░ -->
+<section class="relative overflow-hidden lg:min-h-[100svh]">
+  <div class="grid lg:min-h-[100svh] lg:grid-cols-[1.05fr_1fr]">
+
+    <!-- texto -->
+    <div class="relative z-10 flex items-center px-6 pb-12 pt-28 sm:px-10 sm:pb-16 sm:pt-32 lg:px-16 lg:py-32 xl:px-24">
+      <div class="max-w-xl">
+        <p class="eyebrow" data-reveal>Brasília · Feito à mão</p>
+
+        <div class="mt-5 flex flex-col gap-6 sm:mt-7 sm:flex-row sm:items-center sm:gap-10">
+          <h1 class="font-display text-[2.6rem] font-light leading-[0.95] tracking-tight text-espresso sm:text-6xl xl:text-[4.75rem]" data-reveal data-delay="1">
+            O cookie<br><em class="italic text-gold">perfeito</em><br>não tem pressa.
+          </h1>
+
+          <!-- assinatura, como no cartão de visita -->
+          <div class="flex shrink-0 items-center gap-4 border-t border-caramel/40 pt-6 sm:gap-5 sm:flex-col sm:gap-0 sm:border-l sm:border-t-0 sm:py-2 sm:pl-10 sm:pt-2"
+               data-reveal data-delay="2">
+            <svg viewBox="0 0 64 64" class="h-10 w-10 shrink-0 sm:h-16 sm:w-16" fill="none" aria-hidden="true">
+              <path d="M32 6c5 0 7.5 2.4 11.4 3.6C47.6 10.9 51 11.8 53 15.4c2 3.6 1 6.9 1.4 11.2.4 4.3 2 7.2.6 11.2-1.4 4-4.6 5.3-7.4 8.4-2.8 3.1-3.9 6.6-7.7 8.2-3.8 1.6-6.8-.2-11.2-.2s-7.4 1.8-11.2.2c-3.8-1.6-4.9-5.1-7.7-8.2-2.8-3.1-6-4.4-7.4-8.4-1.4-4 .2-6.9.6-11.2.4-4.3-.6-7.6 1.4-11.2C6.4 11.8 9.8 10.9 14 9.6 17.9 8.4 20.4 6 32 6Z"
+                    stroke="#8A6A45" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M40.4 26c-2-2.8-6-3.6-8.9-1.8-3.2 1.9-4.2 6-2.2 9.1 2.1 3.4 6.6 4.3 10 2.2 3.7-2.3 4.7-7.2 2.4-10.9-2.5-4-7.9-5.2-12-2.8"
+                    stroke="#C9A47A" stroke-width="2.3" stroke-linecap="round"/>
+              <g fill="#8A6A45"><path d="m24 19 2.2 2.2L24 23.4 21.8 21.2z"/><path d="m43.2 20.6 1.8 1.8-1.8 1.8-1.8-1.8z"/><path d="m22.5 38.5 2 2-2 2-2-2z"/><path d="m41.5 41 2 2-2 2-2-2z"/><path d="m31.5 45.5 1.8 1.8-1.8 1.8-1.8-1.8z"/></g>
+              <g stroke="#8A6A45" stroke-width="1.2" stroke-linecap="round" opacity=".7">
+                <path d="M17 24.5h5M16.2 28h4M18.5 31.5h4M45.5 32.5h4M47 36h3.6M35.5 15.5h4"/>
+              </g>
+              <g fill="#C9A47A"><circle cx="45.2" cy="15.4" r="1.5"/><circle cx="49.4" cy="18.8" r="1.1"/></g>
+            </svg>
+            <div class="sm:mt-4 sm:text-center">
+              <p class="font-script text-[2.1rem] leading-none text-cocoa sm:text-5xl">Mari's</p>
+              <p class="mt-2 text-[11px] tracking-[.22em] text-gold sm:mt-3 sm:tracking-[.28em]">61 9121-2362</p>
+            </div>
+          </div>
+        </div>
+
+        <span class="rule mt-7 sm:mt-10" data-reveal data-delay="2"></span>
+
+        <p class="mt-6 max-w-md text-base leading-relaxed text-cocoa/85 sm:mt-8 sm:text-xl" data-reveal data-delay="2">
+          Massa de descanso lento, chocolate belga em lascas generosas e manteiga francesa.
+          Assados em pequenos lotes, no ponto exato entre a borda crocante e o centro que ainda derrete.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-2 sm:mt-11 sm:flex-row sm:items-center sm:gap-4" data-reveal data-delay="3">
+          <a href="https://wa.me/5561991212362?text=Ol%C3%A1%2C%20Mari!%20Gostaria%20de%20fazer%20um%20pedido."
+             target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-3 rounded-full bg-espresso px-9 py-4 text-[11px] uppercase tracking-widest text-cream shadow-[0_18px_40px_-18px_rgba(59,42,29,.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa">
+            Encomendar no WhatsApp
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="https://instagram.com/maris.cookies" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2 px-2 py-4 text-[11px] uppercase tracking-widest text-cocoa/70 underline-offset-8 transition-colors hover:text-gold hover:underline">
+            Ver no Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- foto -->
+    <div class="relative min-h-[46svh] sm:min-h-[58svh] lg:min-h-0">
+      <img src="img/cookies.jpg" alt="Cookies artesanais Mari's Cookies embalados individualmente, servidos em um prato branco"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1000&q=80';this.style.opacity=1"
+           class="absolute inset-0 h-full w-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-t from-cream via-cream/10 to-transparent lg:bg-gradient-to-r lg:from-cream lg:via-cream/0 lg:to-transparent"></div>
+    </div>
+  </div>
+
+  <a href="#marca" class="absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 text-[10px] uppercase tracking-widest text-cocoa/50 transition-colors hover:text-gold lg:flex">
+    Descubra
+    <span class="h-10 w-px bg-caramel/70"></span>
+  </a>
+</section>
+
+<!-- ░░ SELOS ░░ -->
+<section class="border-y border-caramel/25 bg-sand/40">
+  <div class="mx-auto grid max-w-6xl grid-cols-2 divide-caramel/25 px-6 py-10 sm:divide-x md:grid-cols-4 lg:px-12">
+    <div class="px-4 py-4 text-center" data-reveal><p class="font-display text-3xl text-espresso">48h</p><p class="eyebrow mt-2">de fermentação</p></div>
+    <div class="px-4 py-4 text-center" data-reveal data-delay="1"><p class="font-display text-3xl text-espresso">120g</p><p class="eyebrow mt-2">por unidade</p></div>
+    <div class="px-4 py-4 text-center" data-reveal data-delay="2"><p class="font-display text-3xl text-espresso">0</p><p class="eyebrow mt-2">conservantes</p></div>
+    <div class="px-4 py-4 text-center" data-reveal data-delay="3"><p class="font-display text-3xl text-espresso">100%</p><p class="eyebrow mt-2">artesanal</p></div>
+  </div>
+</section>
+
+<!-- ░░ A MARCA ░░ -->
+<section id="marca" class="mx-auto max-w-7xl px-6 py-20 sm:py-36 lg:px-12">
+  <div class="grid gap-12 sm:gap-16 lg:grid-cols-12 lg:gap-24">
+
+    <div class="lg:col-span-5">
+      <p class="eyebrow" data-reveal>A Marca</p>
+      <h2 class="mt-5 font-display text-[2.1rem] font-light leading-tight text-espresso sm:mt-6 sm:text-5xl" data-reveal data-delay="1">
+        Uma receita.<br>Repetida até<br><em class="italic text-gold">ficar certa.</em>
+      </h2>
+      <span class="rule mt-9" data-reveal data-delay="2"></span>
+      <p class="mt-8 text-base leading-relaxed text-cocoa/85 sm:text-lg" data-reveal data-delay="2">
+        A Mari's Cookies nasceu de uma cozinha doméstica em Brasília e de uma obsessão pequena:
+        entender por que um cookie fica bom. A resposta veio devagar — no tempo de descanso da massa,
+        na temperatura da manteiga, no chocolate que se escolhe picar em vez de comprar pronto.
+      </p>
+      <p class="mt-5 text-base leading-relaxed text-cocoa/70 sm:text-lg" data-reveal data-delay="3">
+        Cada fornada continua saindo em pequenos lotes. Não por estratégia, mas porque é o único jeito
+        de olhar cookie por cookie antes de embalar.
+      </p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="grid gap-px overflow-hidden rounded-sm bg-caramel/25 sm:grid-cols-2">
+        <article class="bg-cream p-7 sm:p-11" data-reveal>
+          <span class="font-display text-2xl italic text-caramel">01</span>
+          <h3 class="mt-5 font-display text-2xl text-espresso">Ingredientes selecionados</h3>
+          <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Chocolate belga 54%, manteiga francesa de alto teor de gordura, baunilha em fava e farinha de moagem fina. Sem margarina, sem gordura hidrogenada.</p>
+        </article>
+        <article class="bg-cream p-7 sm:p-11" data-reveal data-delay="1">
+          <span class="font-display text-2xl italic text-caramel">02</span>
+          <h3 class="mt-5 font-display text-2xl text-espresso">Descanso de 48 horas</h3>
+          <p class="mt-4 text-sm leading-relaxed text-cocoa/75">A massa matura sob refrigeração por dois dias. É esse tempo que aprofunda o sabor de caramelo e dá a textura de miolo úmido.</p>
+        </article>
+        <article class="bg-cream p-7 sm:p-11" data-reveal data-delay="2">
+          <span class="font-display text-2xl italic text-caramel">03</span>
+          <h3 class="mt-5 font-display text-2xl text-espresso">Porcionado à mão</h3>
+          <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Cada unidade é pesada e modelada individualmente. As lascas maiores vão para a superfície — o brilho do chocolate faz parte da receita.</p>
+        </article>
+        <article class="bg-cream p-7 sm:p-11" data-reveal data-delay="3">
+          <span class="font-display text-2xl italic text-caramel">04</span>
+          <h3 class="mt-5 font-display text-2xl text-espresso">Assado no dia</h3>
+          <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Nada fica pronto esperando. As fornadas saem conforme os pedidos e são embaladas ainda mornas, uma a uma.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ SABORES ░░ -->
+<section id="sabores" class="bg-sand/45 py-20 sm:py-36">
+  <div class="mx-auto max-w-7xl px-6 lg:px-12">
+
+    <div class="max-w-2xl">
+      <p class="eyebrow" data-reveal>Sabores</p>
+      <h2 class="mt-5 font-display text-[2.1rem] font-light leading-tight text-espresso sm:mt-6 sm:text-5xl" data-reveal data-delay="1">
+        A seleção da casa
+      </h2>
+      <p class="mt-6 max-w-lg text-base leading-relaxed text-cocoa/75 sm:text-lg" data-reveal data-delay="2">
+        Seis criações fixas, disponíveis o ano inteiro. Sabores sazonais são anunciados no Instagram.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-10 sm:mt-16 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article class="group" data-reveal>
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#E4D3B8] to-[#C9A47A]">
+          <img src="img/cookies.jpg" alt="Cookie clássico com chocolate belga" loading="lazy" onload="this.style.opacity=1" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600147566401-c2056eb69479?auto=format&fit=crop&w=1000&q=80'"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Clássico Belga</h3>
+          <span class="eyebrow shrink-0">Best-seller</span>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Chocolate belga 54% em lascas irregulares e flor de sal por cima.</p>
+      </article>
+
+      <article class="group" data-reveal data-delay="1">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#E8DAC3] to-[#B2885A]">
+          <img src="https://images.unsplash.com/photo-1634188023615-7e08901193b6?auto=format&fit=crop&w=1000&q=80" alt="Cookie duplo de chocolate meio amargo" loading="lazy" onload="this.style.opacity=1"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Duplo Cacau</h3>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Massa de cacau intenso com centro derretido de chocolate 70%.</p>
+      </article>
+
+      <article class="group" data-reveal data-delay="2">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#EFE2CC] to-[#C9A47A]">
+          <img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?auto=format&fit=crop&w=1000&q=80" alt="Cookie de doce de leite com nozes" loading="lazy" onload="this.style.opacity=1"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Doce de Leite</h3>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Recheio cremoso de doce de leite argentino com nozes tostadas.</p>
+      </article>
+
+      <article class="group" data-reveal>
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#E4D3B8] to-[#A8804F]">
+          <img src="https://images.unsplash.com/photo-1603889386524-2dc2867a32b4?auto=format&fit=crop&w=1000&q=80" alt="Cookie de pistache com chocolate branco" loading="lazy" onload="this.style.opacity=1"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Pistache</h3>
+          <span class="eyebrow shrink-0">Edição limitada</span>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Pasta de pistache siciliano, chocolate branco e pistaches inteiros.</p>
+      </article>
+
+      <article class="group" data-reveal data-delay="1">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#EFE2CC] to-[#B2885A]">
+          <img src="https://images.unsplash.com/photo-1663479407981-f7fcbf1349a8?auto=format&fit=crop&w=1000&q=80" alt="Cookie red velvet com cream cheese" loading="lazy" onload="this.style.opacity=1"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Red Velvet</h3>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Massa aveludada de cacau suave com núcleo de cream cheese.</p>
+      </article>
+
+      <article class="group" data-reveal data-delay="2">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-sm bg-gradient-to-br from-[#E8DAC3] to-[#C9A47A]">
+          <img src="https://images.unsplash.com/photo-1607114910421-a7c2b982d497?auto=format&fit=crop&w=1000&q=80" alt="Cookie de avelã com creme de chocolate" loading="lazy" onload="this.style.opacity=1"
+               class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-[1.2s] ease-out group-hover:scale-[1.04]">
+        </div>
+        <div class="mt-6 flex items-baseline justify-between gap-4 border-b border-caramel/35 pb-4">
+          <h3 class="font-display text-2xl text-espresso">Avelã</h3>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-cocoa/75">Avelãs caramelizadas e um coração de creme de chocolate e avelã.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CTA ░░ -->
+<section class="relative overflow-hidden bg-espresso py-20 text-cream sm:py-36">
+  <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-caramel/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-gold/10 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-3xl px-6 text-center">
+    <p class="text-[11px] uppercase tracking-widest text-caramel" data-reveal>Encomendas</p>
+    <h2 class="mt-6 font-display text-[2.1rem] font-light leading-tight sm:mt-7 sm:text-6xl" data-reveal data-delay="1">
+      Caixas para presente,<br>eventos e <em class="italic text-caramel">aquele dia comum.</em>
+    </h2>
+    <p class="mx-auto mt-8 max-w-xl leading-relaxed text-cream/70" data-reveal data-delay="2">
+      Atendemos Brasília e região com entrega combinada. Encomendas de caixas personalizadas
+      e kits corporativos com 3 dias de antecedência.
+    </p>
+    <div class="mt-12" data-reveal data-delay="3">
+      <a href="https://wa.me/5561991212362?text=Ol%C3%A1%2C%20Mari!%20Gostaria%20de%20encomendar%20uma%20caixa%20de%20cookies."
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 rounded-full bg-cream px-10 py-4 text-[11px] uppercase tracking-widest text-espresso transition-all duration-300 hover:-translate-y-0.5 hover:bg-caramel">
+        Falar com a Mari
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░ RODAPÉ ░░ -->
+<footer id="contato" class="bg-cream py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-6 lg:px-12">
+    <div class="grid gap-14 border-b border-caramel/30 pb-14 md:grid-cols-3">
+
+      <div>
+        <img src="img/logo.png" alt="Mari's Cookies" class="h-16 w-auto mix-blend-multiply" onerror="this.outerHTML='&lt;p class=\'font-script text-5xl text-cocoa\'&gt;Mari\'s&lt;/p&gt;'">
+        <p class="mt-6 max-w-xs text-sm leading-relaxed text-cocoa/70">
+          Cookies artesanais feitos em pequenos lotes. Brasília · Distrito Federal.
+        </p>
+      </div>
+
+      <div>
+        <p class="eyebrow">Contato</p>
+        <ul class="mt-4 text-sm sm:mt-6">
+          <li><a href="https://wa.me/5561991212362" target="_blank" rel="noopener" class="inline-block py-3 transition-colors hover:text-gold">WhatsApp · (61) 99121-2362</a></li>
+          <li><a href="tel:+5561991212362" class="inline-block py-3 transition-colors hover:text-gold">Ligar · (61) 99121-2362</a></li>
+          <li><a href="mailto:contato@mariscookies.com.br" class="inline-block py-3 transition-colors hover:text-gold">contato@mariscookies.com.br</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="eyebrow">Redes</p>
+        <ul class="mt-4 text-sm sm:mt-6">
+          <li><a href="https://instagram.com/maris.cookies" target="_blank" rel="noopener" class="inline-block py-3 transition-colors hover:text-gold">Instagram · @maris.cookies</a></li>
+          <li><a href="#sabores" class="inline-block py-3 transition-colors hover:text-gold">Sabores</a></li>
+          <li><a href="#marca" class="inline-block py-3 transition-colors hover:text-gold">A Marca</a></li>
+        </ul>
+
+        <div class="mt-7 flex gap-3">
+          <a href="https://wa.me/5561991212362" target="_blank" rel="noopener" aria-label="WhatsApp"
+             class="grid h-11 w-11 place-items-center rounded-full border border-caramel/50 transition-colors hover:border-cocoa hover:bg-cocoa hover:text-cream">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+          </a>
+          <a href="https://instagram.com/maris.cookies" target="_blank" rel="noopener" aria-label="Instagram"
+             class="grid h-11 w-11 place-items-center rounded-full border border-caramel/50 transition-colors hover:border-cocoa hover:bg-cocoa hover:text-cream">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.8-.1m0 1.9c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.2.4-.3 1-.4 2.1 0 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2 0 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.2-.4.3-1 .4-2.1 0-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4-1.2 0-1.6-.1-4.7-.1m0 3.3a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2m0 7.6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5.8-7.8a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 pt-8 text-xs text-cocoa/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span data-year></span> Mari's Cookies. Todos os direitos reservados.</p>
+      <p>Feito à mão em Brasília.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -8%' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  // header ganha fundo depois do scroll
+  const header = document.querySelector('[data-header]');
+  addEventListener('scroll', () => {
+    const solid = scrollY > 40;
+    header.classList.toggle('bg-cream/85', solid);
+    header.classList.toggle('backdrop-blur-md', solid);
+    header.classList.toggle('shadow-[0_1px_0_0_rgba(201,164,122,.35)]', solid);
+    header.classList.toggle('py-0', solid);
+  }, { passive: true });
+
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
